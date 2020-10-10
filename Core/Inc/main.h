@@ -33,6 +33,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "rtthread.h"
 //#include <rtdevice.h> 
 /* USER CODE END Includes */
 

@@ -483,6 +483,16 @@
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f1xx_hal_sram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_sram.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_ll_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_fsmc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -582,6 +592,13 @@
         </Group>
         <Group>
           <GroupName>Drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\lcd.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>cpu</GroupName>

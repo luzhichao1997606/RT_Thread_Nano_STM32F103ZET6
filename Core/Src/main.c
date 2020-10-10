@@ -27,7 +27,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
-#include "rtthread.h"
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,9 +102,20 @@ int main(void)
 //  MX_GPIO_Init();
 //  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	uint8_t lcd_id[12];						//存放LCD ID字符串
+	LCD_Init();           				//初始化LCD FSMC接口
+	POINT_COLOR=RED;     				//画笔颜色：红色
+	sprintf((char*)lcd_id,"LCD ID:%04X",lcddev.id);//将LCD ID打印到lcd_id数组。
+	LCD_Clear(WHITE); 
+	POINT_COLOR=RED;	  
+	rt_kprintf(" LCD ID:%x\r\n",lcddev.id); //打印LCD ID   
+	LCD_ShowString(30,40,210,24,24,"ELITE STM32 ^_^");	
+	LCD_ShowString(30,70,200,16,16,"TFTLCD TEST");
+	LCD_ShowString(30,90,200,16,16,"ATOM@ALIENTEK");
+	LCD_ShowString(30,110,200,16,16,lcd_id);		//显示LCD ID	      					 
+	LCD_ShowString(30,130,200,12,12,"2019/9/27");	      	
   /* USER CODE END 2 */
-
+	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
